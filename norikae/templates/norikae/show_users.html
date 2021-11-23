@@ -1,0 +1,9 @@
+<h1>Users</h1>
+<form>
+{% csrf_token %}
+{% for user in users %}
+<input type ='radio' name='user_choice' value={{user.id}}>{{user.user_name}} <br>
+{% endfor %}
+
+<input type="submit" value="おすすめをみる" formaction="{% url 'norikae:input_user_name' %}" formmethod="POST"/>
+</form>

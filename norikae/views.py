@@ -15,3 +15,12 @@ def record_user(request):
     user_name = request.POST['user_name']
     User.objects.create(user_name=user_name)
     return render(request,'norikae/input_user_name.html')
+
+def show_users(request):
+    users = User.objects.all()
+    content = {
+        'users':users,
+    }
+    # pmf_engine.make_prediction_data()
+    # pmf_engine.build_model()
+    return render(request,'norikae/show_users.html',content)
