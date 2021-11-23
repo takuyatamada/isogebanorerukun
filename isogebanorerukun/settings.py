@@ -15,6 +15,9 @@ import os
 
 from pathlib import Path
 
+# from isogebanorerukun.isogebanorerukun.local_settings import ALLOWED_HOSTS
+from isogebanorerukun.local_settings import ALLOWED_HOSTS
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -30,7 +33,8 @@ DEBUG = True
 
 #追記　https://qiita.com/yusuke_mrmt/items/a540ba5b04a1fd6dbdb7
 ALLOWED_HOSTS = ["isogebanorerukun.herokuapp.com"]
-
+# ALLOWED_HOSTS=['*']
+# ALLOWED_HOSTS=[]
 
 # Application definition
 
@@ -138,8 +142,9 @@ STATICFILES_DIRS = (
 #追記
 DEBUG = False
 
+#ここのlocal_settingsへのパスをちゃんとしたものに変更した
 try:
-    from config.local_settings import *
+    from isogebanorerukun.local_settings import *
 except ImportError:
     pass
 
