@@ -1,4 +1,6 @@
 import os
+
+from isogebanorerukun2.isogebanorerukun2.settings import ALLOWED_HOSTS
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 DATABASES = {
@@ -8,6 +10,7 @@ DATABASES = {
     }
 }
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 DEBUG = True
