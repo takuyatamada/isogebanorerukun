@@ -1,0 +1,9 @@
+<h1>インプットフォーム</h1>
+
+<form>
+{% csrf_token %}
+名前を入力してください:<input type="text" name="user_name">
+<br><br>
+
+<input type="submit" value="決定" formaction="{% url 'norikae:record_user' %}" formmethod="POST"/>
+</form>

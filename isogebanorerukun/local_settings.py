@@ -10,7 +10,7 @@ DATABASES = {
     }
 }
 
-# ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = []
 
 DEBUG = True

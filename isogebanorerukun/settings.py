@@ -32,13 +32,14 @@ SECRET_KEY = '9!de5#3p^7p=hp*9-653)$!%3-0^!7%^aqfe-ek9)%a*jw^3-1'
 DEBUG = True
 
 #追記　https://qiita.com/yusuke_mrmt/items/a540ba5b04a1fd6dbdb7
-ALLOWED_HOSTS = ["localhost","127.0.0.1:8000","isogebanorerukun.herokuapp.com"]
+ALLOWED_HOSTS = ["localhost","127.0.0.1:8000","isogebanorerukun.herokuapp.com","127.0.0.1"]
 # ALLOWED_HOSTS=['*']
 # ALLOWED_HOSTS=[]
 
 # Application definition
 
 INSTALLED_APPS = [
+    'norikae.apps.NorikaeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -81,12 +82,15 @@ WSGI_APPLICATION = 'isogebanorerukun.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+#主キー自動設定
+DEFAULT_AUTO_FIELD='django.db.models.AutoField' 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 #追記　https://qiita.com/yusuke_mrmt/items/a540ba5b04a1fd6dbdb7
 import dj_database_url
 db_from_env = dj_database_url.config()
@@ -140,7 +144,8 @@ STATICFILES_DIRS = (
 )
 
 #追記
-DEBUG = False
+# DEBUG = False
+DEBUG=True
 
 #ここのlocal_settingsへのパスをちゃんとしたものに変更した
 try:
