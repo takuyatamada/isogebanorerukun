@@ -25,7 +25,7 @@ SECRET_KEY = '9!de5#3p^7p=hp*9-653)$!%3-0^!7%^aqfe-ek9)%a*jw^3-1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["isogebanorerukun.herokuapp.com"]
 
 
 # Application definition
@@ -79,6 +79,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+#追記　https://qiita.com/yusuke_mrmt/items/a540ba5b04a1fd6dbdb7
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
