@@ -32,7 +32,7 @@ SECRET_KEY = '9!de5#3p^7p=hp*9-653)$!%3-0^!7%^aqfe-ek9)%a*jw^3-1'
 DEBUG = True
 
 #追記　https://qiita.com/yusuke_mrmt/items/a540ba5b04a1fd6dbdb7
-ALLOWED_HOSTS = ["localhost","127.0.0.1:8000","isogebanorerukun.herokuapp.com"]
+ALLOWED_HOSTS = ["localhost","127.0.0.1:8000","isogebanorerukun.herokuapp.com","isogebanorerukun.herokuapp.com"]
 # ALLOWED_HOSTS=['*']
 # ALLOWED_HOSTS=[]
 
