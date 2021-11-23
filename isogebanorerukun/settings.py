@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+#追記
+import os
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,6 +28,7 @@ SECRET_KEY = '9!de5#3p^7p=hp*9-653)$!%3-0^!7%^aqfe-ek9)%a*jw^3-1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#追記　https://qiita.com/yusuke_mrmt/items/a540ba5b04a1fd6dbdb7
 ALLOWED_HOSTS = ["isogebanorerukun.herokuapp.com"]
 
 
@@ -121,4 +125,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+#追記
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATIC_URL = '/static/'
+
+# 追記
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+#追記
+DEBUG = False
+
+try:
+    from config.local_settings import *
+except ImportError:
+    pass
+
+if not DEBUG:
+    import django_heroku
+    django_heroku.settings(locals())
