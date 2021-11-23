@@ -1,11 +1,27 @@
-asgiref @ file:///tmp/build/80754af9/asgiref_1602513567813/work
-certifi==2020.6.20
-dj-database-url==0.5.0
-Django @ file:///tmp/build/80754af9/django_1601563330930/work
-django-heroku==0.3.1
-gunicorn==20.1.0
-psycopg2 @ file:///C:/ci/psycopg2_1594303009470/work
-pytz==2020.1
-sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
-whitenoise @ file:///home/conda/feedstock_root/build_artifacts/whitenoise_1626463713199/work
-wincertstore==0.2
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: win-64
+asgiref=3.3.0=py_0
+ca-certificates=2021.10.8=h5b45459_0
+certifi=2020.6.20=pyhd3eb1b0_3
+dj-database-url=0.5.0=py_0
+django=3.1.2=py_0
+django-heroku=0.3.1=pyh8c360ce_0
+gunicorn=20.1.0=pypi_0
+krb5=1.17.1=hc04afaa_0
+libpq=12.2=h3235a2c_0
+openssl=1.1.1l=h8ffe710_0
+pip=21.2.2=py36haa95532_0
+psycopg2=2.8.5=py36h7a1dbc1_0
+python=3.6.13=h3758d61_0
+pytz=2020.1=py_0
+setuptools=58.0.4=py36haa95532_0
+sqlite=3.36.0=h2bbff1b_0
+sqlparse=0.4.1=py_0
+tk=8.6.10=he774522_0
+vc=14.2=h21ff451_1
+vs2015_runtime=14.27.29016=h5e58377_2
+wheel=0.37.0=pyhd3eb1b0_1
+whitenoise=5.3.0=pyhd8ed1ab_0
+wincertstore=0.2=py36h7fe50ca_0
+zlib=1.2.11=vc14h1cdd9ab_1
