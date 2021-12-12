@@ -18,8 +18,10 @@ def record_user(request):
 
 def show_users(request):
     users = User.objects.all()
+    routes = Route.objects.all()
     content = {
         'users':users,
+        'routes':routes
     }
     # pmf_engine.make_prediction_data()
     # pmf_engine.build_model()

@@ -5,5 +5,9 @@
 <input type ='radio' name='user_choice' value={{user.id}}>{{user.user_name}} <br>
 {% endfor %}
 
+{% for route in routes %}
+<input type ='radio' name='route_choice' value={{route.id}}>{{route.route_name}},{{route.departure_name}} <br>
+{% endfor %}
+
 <input type="submit" value="おすすめをみる" formaction="{% url 'norikae:input_user_name' %}" formmethod="POST"/>
 </form>
