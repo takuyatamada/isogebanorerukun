@@ -2,7 +2,7 @@
 <form>
 {% csrf_token %}
 {% for user in users %}
-<input type ='radio' name='user_choice' value={{user.id}}>{{user.user_name}} <br>
+<input type ='radio' name='user_choice' value={{user.id}}>{{user.user_name}}aa <br>
 {% endfor %}
 
 {% for route in routes %}
